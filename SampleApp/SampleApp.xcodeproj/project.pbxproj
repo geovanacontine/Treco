@@ -25,7 +25,6 @@
 		20F5832927BDCA830049FEF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20F5832C27BDCA830049FEF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20F5832E27BDCA830049FEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20F5833527BDCB610049FEF9 /* Treco */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Treco; path = ../Treco; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +74,6 @@
 		20F5833427BDCB610049FEF9 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				20F5833527BDCB610049FEF9 /* Treco */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

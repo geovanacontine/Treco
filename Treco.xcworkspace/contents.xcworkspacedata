@@ -5,6 +5,6 @@
       location = "group:SampleApp/SampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Treco">
+      location = "group:">
    </FileRef>
 </Workspace>
