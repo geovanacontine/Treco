@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2074236127C29FA50051889E /* Treco in Frameworks */ = {isa = PBXBuildFile; productRef = 2074236027C29FA50051889E /* Treco */; };
 		20F5832127BDCA820049FEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5832027BDCA820049FEF9 /* AppDelegate.swift */; };
 		20F5832327BDCA820049FEF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5832227BDCA820049FEF9 /* SceneDelegate.swift */; };
 		20F5832527BDCA820049FEF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5832427BDCA820049FEF9 /* ViewController.swift */; };
 		20F5832827BDCA820049FEF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F5832627BDCA820049FEF9 /* Main.storyboard */; };
 		20F5832A27BDCA830049FEF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F5832927BDCA830049FEF9 /* Assets.xcassets */; };
 		20F5832D27BDCA830049FEF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F5832B27BDCA830049FEF9 /* LaunchScreen.storyboard */; };
-		20F5833B27BDCC8A0049FEF9 /* Treco in Frameworks */ = {isa = PBXBuildFile; productRef = 20F5833A27BDCC8A0049FEF9 /* Treco */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20F5833B27BDCC8A0049FEF9 /* Treco in Frameworks */,
+				2074236127C29FA50051889E /* Treco in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 			);
 			name = SampleApp;
 			packageProductDependencies = (
-				20F5833A27BDCC8A0049FEF9 /* Treco */,
+				2074236027C29FA50051889E /* Treco */,
 			);
 			productName = SampleApp;
 			productReference = 20F5831D27BDCA810049FEF9 /* SampleApp.app */;
@@ -132,6 +132,8 @@
 				Base,
 			);
 			mainGroup = 20F5831427BDCA810049FEF9;
+			packageReferences = (
+			);
 			productRefGroup = 20F5831E27BDCA810049FEF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -383,7 +385,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		20F5833A27BDCC8A0049FEF9 /* Treco */ = {
+		2074236027C29FA50051889E /* Treco */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Treco;
 		};
