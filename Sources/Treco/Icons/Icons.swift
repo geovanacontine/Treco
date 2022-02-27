@@ -1,6 +1,6 @@
 //
 //  Icons.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 15/01/22.
 //

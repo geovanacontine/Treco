@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2074236127C29FA50051889E /* Treco in Frameworks */ = {isa = PBXBuildFile; productRef = 2074236027C29FA50051889E /* Treco */; };
+		20F0DA6027CC3733000F9650 /* tokens.json in Resources */ = {isa = PBXBuildFile; fileRef = 20F0DA5F27CC36B8000F9650 /* tokens.json */; };
 		20F5832127BDCA820049FEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5832027BDCA820049FEF9 /* AppDelegate.swift */; };
 		20F5832327BDCA820049FEF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5832227BDCA820049FEF9 /* SceneDelegate.swift */; };
 		20F5832527BDCA820049FEF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5832427BDCA820049FEF9 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20F0DA5F27CC36B8000F9650 /* tokens.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tokens.json; sourceTree = "<group>"; };
 		20F5831D27BDCA810049FEF9 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F5832027BDCA820049FEF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20F5832227BDCA820049FEF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				20F5832027BDCA820049FEF9 /* AppDelegate.swift */,
 				20F5832227BDCA820049FEF9 /* SceneDelegate.swift */,
 				20F5832427BDCA820049FEF9 /* ViewController.swift */,
+				20F0DA5F27CC36B8000F9650 /* tokens.json */,
 				20F5832627BDCA820049FEF9 /* Main.storyboard */,
 				20F5832927BDCA830049FEF9 /* Assets.xcassets */,
 				20F5832B27BDCA830049FEF9 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				20F5832D27BDCA830049FEF9 /* LaunchScreen.storyboard in Resources */,
 				20F5832A27BDCA830049FEF9 /* Assets.xcassets in Resources */,
 				20F5832827BDCA820049FEF9 /* Main.storyboard in Resources */,
+				20F0DA6027CC3733000F9650 /* tokens.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

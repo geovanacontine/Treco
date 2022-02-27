@@ -1,6 +1,6 @@
 //
 //  Shadow.swift
-//  Photos
+//  Treco
 //
 //  Created by Pedro Contine on 23/12/21.
 //
@@ -34,7 +34,7 @@ public extension ShadowLevel {
 
 public extension UIView {
     func addShadow(level: ShadowLevel) {
-        layer.shadowColor = UIColor.neutralDarkPure.cgColor
+        layer.shadowColor = UIColor.treco(.neutralDarkPure).cgColor
         layer.shadowOpacity = Opacity.light.rawValue
         layer.shadowOffset = level.offset
         layer.shadowRadius = level.radius

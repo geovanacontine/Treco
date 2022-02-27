@@ -1,6 +1,6 @@
 //
 //  UIView+Extensions.swift
-//  Photos
+//  Treco
 //
 //  Created by Pedro Contine on 23/12/21.
 //

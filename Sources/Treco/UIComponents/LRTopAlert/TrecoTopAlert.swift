@@ -1,6 +1,6 @@
 //
 //  TrecoTopAlert.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 16/01/22.
 //
@@ -162,16 +162,16 @@ public extension LRAlertStyle {
     var messageFontColor: UIColor {
         switch self {
         case .error, .success:
-            return .neutralLightPure
+            return .treco(.neutralLightPure)
         }
     }
     
     var backgroundColor: UIColor {
         switch self {
         case .error:
-            return .feedbackError
+            return .treco(.feedbackError)
         case .success:
-            return .feedbackSuccess
+            return .treco(.feedbackSuccess)
         }
     }
 }

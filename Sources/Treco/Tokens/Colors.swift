@@ -1,27 +1,35 @@
 //
 //  Colors.swift
-//  Photos
+//  Treco
 //
 //  Created by Pedro Contine on 23/12/21.
 //
 
 import UIKit
 
-public extension UIColor {
+public enum Colors: String {
     // Brand
-    static let brandPure = UIColor.purple
+    case brandPure
     
     // Neutral Light
-    static let neutralLightPure = UIColor.white
+    case neutralLightPure
     
     // Neutral Dark
-    static let neutralDarkPure = UIColor.black
-    static let neutralDark2 = UIColor.gray
-    static let neutralDark3 = UIColor.lightGray
-    static let neutralDark4 = UIColor.black.withAlphaComponent(0.1)
+    case neutralDarkPure
+    case neutralDark2
+    case neutralDark3
     
     // Feedback
-    static let feedbackError = UIColor.systemRed
-    static let feedbackSuccess = UIColor.systemGreen
-    static let feedbackWarning = UIColor.systemOrange
+    case feedbackError
+    case feedbackSuccess
+    case feedbackInfo
+}
+
+public extension UIColor {
+    static func treco(_ color: Colors) -> UIColor {
+        let tokenPrefix = "color_"
+        let colorToken = tokenPrefix + color.rawValue
+        let hex = TokensManager.shared.getValue(colorToken) ?? ""
+        return .init(hex: hex)
+    }
 }

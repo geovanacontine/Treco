@@ -1,6 +1,6 @@
 //
 //  UITextField+Extensions.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 21/01/22.
 //
@@ -19,7 +19,7 @@ public extension UITextField {
         let font = UIFont.init(style: .title2)
         
         let attributes = [NSAttributedString.Key.font: font,
-                          NSAttributedString.Key.foregroundColor: UIColor.brandPure]
+                          NSAttributedString.Key.foregroundColor: UIColor.treco(.brandPure)]
         done.setTitleTextAttributes(attributes, for: .normal)
         
         var items = [UIBarButtonItem]()

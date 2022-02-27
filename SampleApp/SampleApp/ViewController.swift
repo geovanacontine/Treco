@@ -13,9 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .brandPure
-        let button = TrecoTopAlert()
-        button.render(withDTO: .init(message: "", style: .error, shouldAutoDismiss: true))
+        view.backgroundColor = .treco(.brandPure)
     }
 }
 

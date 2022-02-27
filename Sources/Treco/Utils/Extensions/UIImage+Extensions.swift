@@ -1,6 +1,6 @@
 //
 //  UIImage+Extensions.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 03/01/22.
 //

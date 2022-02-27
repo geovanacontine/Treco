@@ -1,6 +1,6 @@
 //
 //  TrecoButton.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 16/01/22.
 //
@@ -107,7 +107,7 @@ public extension TrecoButton {
         
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.color = .neutralLightPure
+        activityIndicator.color = .treco(.neutralLightPure)
         activityIndicator.isUserInteractionEnabled = false
         activityIndicator.isHidden = true
         self.activityIndicator = activityIndicator
@@ -128,8 +128,8 @@ public extension TrecoButton {
         let hasBorder: Bool
         
         public init(title: String,
-                    backgroundColor: UIColor = .brandPure,
-                    textColor: UIColor = .neutralLightPure,
+                    backgroundColor: UIColor = .treco(.brandPure),
+                    textColor: UIColor = .treco(.neutralLightPure),
                     isEnabled: Bool = true,
                     isSecondary: Bool = false,
                     hasBorder: Bool = true) {

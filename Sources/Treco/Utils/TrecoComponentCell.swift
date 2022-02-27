@@ -1,6 +1,6 @@
 //
 //  TrecoComponentCell.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 18/01/22.
 //

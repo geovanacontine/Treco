@@ -1,6 +1,6 @@
 //
 //  TrecoLabelRow.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 22/01/22.
 //
@@ -40,7 +40,7 @@ public class TrecoLabelRow: UIView {
         verticalStackView.spacing = Spacing.xxs.value
         fillWithSubview(subview: verticalStackView)
         
-        topDivisorView.backgroundColor = .neutralDark4
+        topDivisorView.backgroundColor = .treco(.neutralDark3)
         topDivisorView.translatesAutoresizingMaskIntoConstraints = false
         topDivisorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         verticalStackView.addArrangedSubview(topDivisorView)
@@ -49,27 +49,27 @@ public class TrecoLabelRow: UIView {
         horizontalStackView.spacing = Spacing.xs.value
         verticalStackView.addArrangedSubview(horizontalStackView)
         
-        bottomDivisorView.backgroundColor = .neutralDark4
+        bottomDivisorView.backgroundColor = .treco(.neutralDark3)
         bottomDivisorView.translatesAutoresizingMaskIntoConstraints = false
         bottomDivisorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         verticalStackView.addArrangedSubview(bottomDivisorView)
         
-        iconView.tintColor = .brandPure
+        iconView.tintColor = .treco(.brandPure)
         iconView.contentMode = .scaleAspectFit
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.widthAnchor.constraint(equalToConstant: Spacing.sm.value).isActive = true
         horizontalStackView.addArrangedSubview(iconView)
         
         titleLabel.font = .init(style: .title3)
-        titleLabel.textColor = .neutralDarkPure
+        titleLabel.textColor = .treco(.neutralDarkPure)
         horizontalStackView.addArrangedSubview(titleLabel)
         
         valueLabel.font = .init(style: .body)
-        valueLabel.textColor = .neutralDark3
+        valueLabel.textColor = .treco(.neutralDark3)
         horizontalStackView.addArrangedSubview(valueLabel)
         
         disclosureIconView.image = .init(icon: .chevron, font: .init(style: .title3))
-        disclosureIconView.tintColor = .neutralDark3
+        disclosureIconView.tintColor = .treco(.neutralDark3)
         disclosureIconView.contentMode = .scaleAspectFit
         horizontalStackView.addArrangedSubview(disclosureIconView)
     }

@@ -1,6 +1,6 @@
 //
 //  UITableView+Extensions.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 31/12/21.
 //

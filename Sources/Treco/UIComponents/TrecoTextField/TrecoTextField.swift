@@ -1,6 +1,6 @@
 //
 //  LRTextFieldComponent.swift
-//  PhotosApp
+//  Treco
 //
 //  Created by Pedro Contine on 15/01/22.
 //
@@ -67,7 +67,7 @@ public class TrecoTextField: UIView {
         }
         
         textField.isEnabled = dto.isEnabled
-        textField.textColor = dto.isEnabled ? .neutralDarkPure : .neutralDark2
+        textField.textColor = dto.isEnabled ? .treco(.neutralDarkPure) : .treco(.neutralDark2)
     }
 }
 
@@ -97,8 +97,8 @@ public extension TrecoTextField {
                                   bottom: Spacing.xxs.value,
                                   right: Spacing.xxs.value)
         
-        textField.addBorder(width: .thin, radius: .small, color: .neutralDark3)
-        textField.tintColor = .neutralDark3
+        textField.addBorder(width: .thin, radius: .small, color: .treco(.neutralDark3))
+        textField.tintColor = .treco(.neutralDark3)
         textField.font = .init(style: .title3)
         textField.addDoneButtonToKeyboard(title: "Confirmar")
     }
@@ -106,8 +106,8 @@ public extension TrecoTextField {
     private func setupTitleLabel() {
         titleLabel.font = .init(style: .body)
         titleLabel.textAlignment = .center
-        titleLabel.textColor = .neutralDark2
-        titleLabel.backgroundColor = .neutralLightPure
+        titleLabel.textColor = .treco(.neutralDark2)
+        titleLabel.backgroundColor = .treco(.neutralLightPure)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(titleLabel)
@@ -129,7 +129,7 @@ public extension TrecoTextField {
     
     private func setupErrorImageView() {
         errorImageView.image = .init(icon: .error, font: .init(style: .caption))
-        errorImageView.tintColor = .feedbackError
+        errorImageView.tintColor = .treco(.feedbackError)
         errorImageView.contentMode = .scaleAspectFit
         
         errorImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -191,16 +191,16 @@ public extension TrecoTextField {
         errorImageView.isHidden = false
         delegate?.didFinishEditingWithError(errorMessage: errorMessage)
         UINotificationFeedbackGenerator().notificationOccurred(.error)
-        textField.addBorder(width: .thin, radius: .small, color: .feedbackError)
-        titleLabel.textColor = .feedbackError
-        textField.tintColor = .feedbackError
+        textField.addBorder(width: .thin, radius: .small, color: .treco(.feedbackError))
+        titleLabel.textColor = .treco(.feedbackError)
+        textField.tintColor = .treco(.feedbackError)
     }
     
     private func setupViewNormalState() {
         errorImageView.isHidden = true
-        textField.addBorder(width: .thin, radius: .small, color: .neutralDark3)
-        titleLabel.textColor = .neutralDark3
-        textField.tintColor = .neutralDark3
+        textField.addBorder(width: .thin, radius: .small, color: .treco(.neutralDark3))
+        titleLabel.textColor = .treco(.neutralDark3)
+        textField.tintColor = .treco(.neutralDark3)
     }
     
     @objc private func didTapErrorImage() {
