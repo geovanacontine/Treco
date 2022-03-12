@@ -6,36 +6,56 @@
 //
 
 import UIKit
+import SwiftUI
 
-public enum ShadowLevel {
+public enum Shadow: String {
     case level1
     case level2
 }
 
-public extension ShadowLevel {
+public extension Shadow {
     var offset: CGSize {
-        switch self {
-        case .level1:
-            return .init(width: 0, height: 4)
-        case .level2:
-            return .init(width: 0, height: 8)
-        }
+        let tokenPrefix = "shadowOffset_"
+        let shadowOffsetToken = tokenPrefix + rawValue
+        let height = TokensManager.shared.getFloatValue(shadowOffsetToken) ?? 0
+        return .init(width: 0, height: height)
     }
     
     var radius: CGFloat {
-        switch self {
-        case .level1:
-            return 8
-        case .level2:
-            return 16
-        }
+        let tokenPrefix = "shadowRadius_"
+        let shadowRadiusToken = tokenPrefix + rawValue
+        return TokensManager.shared.getFloatValue(shadowRadiusToken) ?? 0
+    }
+}
+
+// MARK: - Extensions
+
+public struct TrecoShadow: ViewModifier {
+    
+    private let shadow: Shadow
+    private let color: Colors
+    
+    public init(_ shadow: Shadow, color: Colors = .neutralDarkPure) {
+        self.shadow = shadow
+        self.color = color
+    }
+    
+    public func body(content: Content) -> some View {
+        content
+            .shadow(color: Color.treco(.neutralDarkPure), radius: shadow.radius, x: shadow.offset.width, y: shadow.offset.height)
+    }
+}
+
+public extension View {
+    func addShadow(_ shadow: Shadow, color: Colors = .neutralDarkPure) -> some View {
+        modifier(TrecoShadow(shadow, color: color))
     }
 }
 
 public extension UIView {
-    func addShadow(level: ShadowLevel) {
+    func addShadow(level: Shadow) {
         layer.shadowColor = UIColor.treco(.neutralDarkPure).cgColor
-        layer.shadowOpacity = Opacity.light.rawValue
+        layer.shadowOpacity = Float(Opacity.light.value)
         layer.shadowOffset = level.offset
         layer.shadowRadius = level.radius
     }

@@ -6,20 +6,42 @@
 //
 
 import UIKit
+import SwiftUI
 
-public enum Spacing: CGFloat {
-    case xxxs = 4
-    case xxs = 8
-    case xs = 16
-    case sm = 24
-    case md = 32
-    case lg = 40
-    case xl = 64
-    case xxl = 96
+public enum Spacing: String {
+    case none
+    case xxxs
+    case xxs
+    case xs
+    case sm
+    case md
+    case lg
+    case xl
+    case xxl
 }
 
 public extension Spacing {
     var value: CGFloat {
-        rawValue
+        let tokenPrefix = "spacing_"
+        let spacingToken = tokenPrefix + rawValue
+        return TokensManager.shared.getFloatValue(spacingToken) ?? 0
+    }
+}
+
+// MARK: - TrecoSpacer
+
+public struct TrecoSpacer: View {
+    
+    private let vertical: Spacing
+    private let horizontal: Spacing
+    
+    public init(vertical: Spacing = .none, horizontal: Spacing = .none) {
+        self.vertical = vertical
+        self.horizontal = horizontal
+    }
+    
+    public var body: some View {
+        Spacer()
+            .frame(width: horizontal.value, height: vertical.value)
     }
 }

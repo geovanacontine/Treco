@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 public enum Colors: String {
     // Brand
@@ -29,7 +30,14 @@ public extension UIColor {
     static func treco(_ color: Colors) -> UIColor {
         let tokenPrefix = "color_"
         let colorToken = tokenPrefix + color.rawValue
-        let hex = TokensManager.shared.getValue(colorToken) ?? ""
+        let hex = TokensManager.shared.getStringValue(colorToken) ?? ""
         return .init(hex: hex)
+    }
+}
+
+public extension Color {
+    static func treco(_ color: Colors) -> Color {
+        let uiColor: UIColor = .treco(color)
+        return .init(uiColor)
     }
 }

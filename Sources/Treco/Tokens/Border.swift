@@ -6,19 +6,50 @@
 //
 
 import UIKit
+import SwiftUI
 
-public enum BorderWidth: CGFloat {
-    case none = 0
-    case thin = 1
-    case thick = 2
-    case thicker = 4
+// MARK: - BorderWidth
+
+public enum BorderWidth: String {
+    case none
+    case thin
+    case thick
+    case thicker
 }
 
-public enum BorderRadius: CGFloat {
-    case none = 0
-    case small = 4
-    case medium = 8
-    case large = 16
+public extension BorderWidth {
+    var value: CGFloat {
+        let tokenPrefix = "borderWidth_"
+        let borderWidthToken = tokenPrefix + rawValue
+        return TokensManager.shared.getFloatValue(borderWidthToken) ?? 0
+    }
+}
+
+// MARK: - BorderRadius
+
+public enum BorderRadius: String {
+    case none
+    case small
+    case medium
+    case large
+}
+
+public extension BorderRadius {
+    var value: CGFloat {
+        let tokenPrefix = "borderRadius_"
+        let borderRadiusToken = tokenPrefix + rawValue
+        return TokensManager.shared.getFloatValue(borderRadiusToken) ?? 0
+    }
+}
+
+// MARK: - Extensions
+
+public extension View {
+    func addBorder(radius: BorderRadius, width: BorderWidth = .thin, color: Colors = .neutralDarkPure) -> some View {
+        let roundedRect = RoundedRectangle(cornerRadius: radius.value)
+        return clipShape(roundedRect)
+            .overlay(roundedRect.strokeBorder(Color.treco(color), lineWidth: width.value))
+    }
 }
 
 public extension UIView {
@@ -26,9 +57,9 @@ public extension UIView {
                    radius: BorderRadius = .none,
                    color: UIColor = .clear) {
         
-        layer.borderWidth = width.rawValue
+        layer.borderWidth = width.value
         layer.borderColor = color.cgColor
-        layer.cornerRadius = radius.rawValue
+        layer.cornerRadius = radius.value
         clipsToBounds = true
     }
 }

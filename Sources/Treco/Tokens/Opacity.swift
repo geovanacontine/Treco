@@ -7,10 +7,18 @@
 
 import UIKit
 
-public enum Opacity: Float {
-    case none = 0
-    case semiOpaque = 0.8
-    case intense = 0.64
-    case medium = 0.4
-    case light = 0.16
+public enum Opacity: String {
+    case none
+    case semiOpaque
+    case intense
+    case medium
+    case light
+}
+
+public extension Opacity {
+    var value: CGFloat {
+        let tokenPrefix = "opacity_"
+        let opacityToken = tokenPrefix + rawValue
+        return TokensManager.shared.getFloatValue(opacityToken) ?? 0
+    }
 }
