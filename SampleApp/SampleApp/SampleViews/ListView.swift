@@ -32,6 +32,11 @@ struct ListView: View {
                         TrecoText("Shadow")
                     }
                 }
+                Section(header: TrecoText("Components")) {
+                    NavigationLink(destination: ButtonView()) {
+                        TrecoText("Button")
+                    }
+                }
             }
             .navigationTitle("Treco Design System")
             .navigationBarTitleDisplayMode(.inline)

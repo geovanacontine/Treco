@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class TokensManager: Decodable {
+public class TokensManager {
     
     public static let shared = TokensManager()
     private var tokens: [String: String] = [:]

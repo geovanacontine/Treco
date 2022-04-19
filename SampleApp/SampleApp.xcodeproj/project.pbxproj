@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200F271327EF689400D1B769 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F271227EF689400D1B769 /* ButtonView.swift */; };
 		205931A527D03BA000FE1547 /* tokens.json in Resources */ = {isa = PBXBuildFile; fileRef = 205931A427D03BA000FE1547 /* tokens.json */; };
 		206D711A27D4FAC200CF987D /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D711927D4FAC200CF987D /* BorderView.swift */; };
 		206D711C27D5028C00CF987D /* OpacityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D711B27D5028C00CF987D /* OpacityView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200F271227EF689400D1B769 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		205931A427D03BA000FE1547 /* tokens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tokens.json; sourceTree = "<group>"; };
 		206D711927D4FAC200CF987D /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		206D711B27D5028C00CF987D /* OpacityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200F271127EF687E00D1B769 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				200F271227EF689400D1B769 /* ButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2078F65427EE6A0C0015C8CA /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				20890F7F27D035E600EF758A /* FontsView.swift */,
+				20DC392127D3C945000C1770 /* ColorsView.swift */,
+				206D711927D4FAC200CF987D /* BorderView.swift */,
+				206D711B27D5028C00CF987D /* OpacityView.swift */,
+				20D76A5227DCE84100842812 /* SpacingView.swift */,
+				20D76A5427DD1EEB00842812 /* ShadowView.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
 		20890F7127D035E600EF758A = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				20DC391F27D3C685000C1770 /* ListView.swift */,
-				20890F7F27D035E600EF758A /* FontsView.swift */,
-				20DC392127D3C945000C1770 /* ColorsView.swift */,
-				206D711927D4FAC200CF987D /* BorderView.swift */,
-				206D711B27D5028C00CF987D /* OpacityView.swift */,
-				20D76A5227DCE84100842812 /* SpacingView.swift */,
-				20D76A5427DD1EEB00842812 /* ShadowView.swift */,
+				2078F65427EE6A0C0015C8CA /* Tokens */,
+				200F271127EF687E00D1B769 /* Components */,
 			);
 			path = SampleViews;
 			sourceTree = "<group>";
@@ -188,6 +207,7 @@
 				20890F7E27D035E600EF758A /* SampleAppApp.swift in Sources */,
 				206D711C27D5028C00CF987D /* OpacityView.swift in Sources */,
 				20DC392027D3C685000C1770 /* ListView.swift in Sources */,
+				200F271327EF689400D1B769 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
