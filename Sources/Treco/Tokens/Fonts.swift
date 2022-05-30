@@ -47,13 +47,17 @@ public enum FontWeight: String {
 
 // MARK: - FontStyle
 
-public enum FontStyle {
+public enum FontStyle: String {
     case caption
     case body
     case title
     case title2
     case title3
     case largeTitle
+    
+    public init(fromRawValue rawValue: String) {
+        self = FontStyle(rawValue: rawValue) ?? .body
+    }
 }
 
 public extension FontStyle {

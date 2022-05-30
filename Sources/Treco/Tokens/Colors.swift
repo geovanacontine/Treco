@@ -24,6 +24,10 @@ public enum Colors: String {
     case feedbackError
     case feedbackSuccess
     case feedbackInfo
+    
+    public init(fromRawValue rawValue: String) {
+        self = Colors(rawValue: rawValue) ?? .brandPure
+    }
 }
 
 public extension UIColor {
