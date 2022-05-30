@@ -10,6 +10,7 @@ import SwiftUI
 
 public enum Spacing: String {
     case none
+    case us
     case xxxs
     case xxs
     case xs
