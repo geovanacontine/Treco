@@ -18,6 +18,10 @@ public enum Spacing: String {
     case lg
     case xl
     case xxl
+    
+    public init(fromRawValue rawValue: String) {
+        self = Spacing(rawValue: rawValue) ?? .none
+    }
 }
 
 public extension Spacing {

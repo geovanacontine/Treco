@@ -26,7 +26,7 @@ public enum Colors: String {
     case feedbackInfo
     
     public init(fromRawValue rawValue: String) {
-        self = Colors(rawValue: rawValue) ?? .brandPure
+        self = Colors(rawValue: rawValue) ?? .neutralLightPure
     }
 }
 
