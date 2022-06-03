@@ -17,6 +17,7 @@ public enum FontFamily: String {
 // MARK: - FontSize
 
 public enum FontSize: String {
+    case xxxs
     case xxs
     case xs
     case sm
@@ -51,6 +52,7 @@ public enum FontStyle: String {
     case heading4
     case paragraph
     case description
+    case caption
     
     public init(fromRawValue rawValue: String) {
         self = FontStyle(rawValue: rawValue) ?? .paragraph
@@ -72,6 +74,8 @@ public extension FontStyle {
             return .xs
         case .description:
             return .xxs
+        case .caption:
+            return .xxxs
         }
     }
     
@@ -89,12 +93,14 @@ public extension FontStyle {
             return .regular
         case .description:
             return .regular
+        case .caption:
+            return .light
         }
     }
     
     var color: Color {
         switch self {
-        case .description:
+        case .description, .caption:
             return Color.treco(.neutralDark2)
         default:
             return Color.treco(.neutralDarkPure)
