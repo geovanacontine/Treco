@@ -53,7 +53,7 @@ public enum FontStyle: String {
     case description
     
     public init(fromRawValue rawValue: String) {
-        self = FontStyle(rawValue: rawValue) ?? .body
+        self = FontStyle(rawValue: rawValue) ?? .paragraph
     }
 }
 
@@ -64,7 +64,7 @@ public extension FontStyle {
             return .lg
         case .heading2:
             return .md
-        case .heading3,
+        case .heading3:
             return .sm
         case .heading4:
             return .xs
@@ -81,7 +81,7 @@ public extension FontStyle {
             return .bold
         case .heading2:
             return .bold
-        case .heading3,
+        case .heading3:
             return .semiBold
         case .heading4:
             return .semiBold

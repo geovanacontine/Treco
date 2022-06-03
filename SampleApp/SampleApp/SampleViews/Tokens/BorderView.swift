@@ -41,7 +41,7 @@ struct BorderWidthTokenView: View {
         VStack {
             HStack {
                 TrecoText(width.rawValue + " (\(Int(width.value))px)")
-                    .textStyle(.caption)
+                    .textStyle(.description)
                 Spacer()
             }
             Rectangle()
@@ -66,7 +66,7 @@ struct BorderRadiusTokenView: View {
         VStack {
             HStack {
                 TrecoText(radius.rawValue + " (\(Int(radius.value))px)")
-                    .textStyle(.caption)
+                    .textStyle(.description)
                 Spacer()
             }
             Rectangle()

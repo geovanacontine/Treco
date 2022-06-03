@@ -31,7 +31,7 @@ struct ShadowTokenView: View {
         VStack {
             HStack {
                 TrecoText(shadow.rawValue + " radius: (\(shadow.radius)) offset: \(shadow.offset)")
-                    .textStyle(.caption)
+                    .textStyle(.description)
                 Spacer()
             }
             VStack {

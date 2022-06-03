@@ -45,7 +45,7 @@ struct ColorTokenView: View {
         VStack {
             HStack {
                 TrecoText(color.rawValue + " (\(hex()))")
-                    .textStyle(.caption)
+                    .textStyle(.description)
                 Spacer()
             }
             Rectangle()

@@ -34,7 +34,7 @@ struct OpacityTokenView: View {
         VStack {
             HStack {
                 TrecoText(opacity.rawValue + " (\(opacity.value))")
-                    .textStyle(.caption)
+                    .textStyle(.description)
                 Spacer()
             }
             Rectangle()

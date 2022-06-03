@@ -51,7 +51,7 @@ struct HorizontalSpacingTokenView: View {
         VStack {
             HStack {
                 TrecoText(spacing.rawValue + " (\(spacing.value))")
-                    .textStyle(.caption)
+                    .textStyle(.description)
                 Spacer()
             }
             HStack {
@@ -81,7 +81,7 @@ struct VerticalSpacingTokenView: View {
         VStack {
             HStack {
                 TrecoText(spacing.rawValue + " (\(spacing.value))")
-                    .textStyle(.caption)
+                    .textStyle(.description)
                 Spacer()
             }
             VStack {
