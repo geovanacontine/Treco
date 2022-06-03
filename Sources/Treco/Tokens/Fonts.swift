@@ -11,21 +11,17 @@ import SwiftUI
 // MARK: - FontFamily
 
 public enum FontFamily: String {
-    case base = "Roboto"
+    case base = "Montserrat"
 }
 
 // MARK: - FontSize
 
 public enum FontSize: String {
-    case us
-    case xxxs
     case xxs
     case xs
     case sm
     case md
     case lg
-    case xl
-    case xxl
 }
 
 public extension FontSize {
@@ -42,18 +38,19 @@ public enum FontWeight: String {
     case light
     case regular
     case medium
+    case semiBold
     case bold
 }
 
 // MARK: - FontStyle
 
 public enum FontStyle: String {
-    case caption
-    case body
-    case title
-    case title2
-    case title3
-    case largeTitle
+    case heading1
+    case heading2
+    case heading3
+    case heading4
+    case paragraph
+    case description
     
     public init(fromRawValue rawValue: String) {
         self = FontStyle(rawValue: rawValue) ?? .body
@@ -63,39 +60,43 @@ public enum FontStyle: String {
 public extension FontStyle {
     var size: FontSize {
         switch self {
-        case .caption:
-            return .us
-        case .body:
-            return .xxxs
-        case .title2, .title3:
-            return .xxs
-        case .title:
-            return .sm
-        case .largeTitle:
+        case .heading1:
             return .lg
+        case .heading2:
+            return .md
+        case .heading3,
+            return .sm
+        case .heading4:
+            return .xs
+        case .paragraph:
+            return .xs
+        case .description:
+            return .xxs
         }
     }
     
     var weight: FontWeight {
         switch self {
-        case .caption:
-            return .light
-        case .body, .title3:
-            return .regular
-        case .title2:
-            return .medium
-        case .title, .largeTitle:
+        case .heading1:
             return .bold
+        case .heading2:
+            return .bold
+        case .heading3,
+            return .semiBold
+        case .heading4:
+            return .semiBold
+        case .paragraph:
+            return .regular
+        case .description:
+            return .regular
         }
     }
     
     var color: Color {
         switch self {
-        case .caption:
-            return Color.treco(.neutralDark3)
-        case .body, .title3:
+        case .description:
             return Color.treco(.neutralDark2)
-        case .title2, .title, .largeTitle:
+        default:
             return Color.treco(.neutralDarkPure)
         }
     }
