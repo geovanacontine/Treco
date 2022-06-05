@@ -31,11 +31,11 @@ extension TokensManager {
 // MARK: - Internal methods
 
 extension TokensManager {
-    func getStringValue(_ token: String) -> String? {
+    public func getStringValue(_ token: String) -> String? {
         tokens[token]
     }
     
-    func getFloatValue(_ token: String) -> CGFloat? {
+    public func getFloatValue(_ token: String) -> CGFloat? {
         guard let sizeString = tokens[token],
               let sizeDouble = Double(sizeString) else {
             return nil

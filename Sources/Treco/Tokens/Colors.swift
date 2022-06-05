@@ -14,6 +14,8 @@ public enum Colors: String {
     
     // Neutral Light
     case neutralLightPure
+    case neutralLight2
+    case neutralLight3
     
     // Neutral Dark
     case neutralDarkPure
