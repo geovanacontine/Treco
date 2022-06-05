@@ -132,9 +132,11 @@ public struct TrecoText: View {
 public struct TrecoTextStyle: ViewModifier {
     
     private let style: FontStyle
+    private let color: Color?
     
-    public init(style: FontStyle) {
+    public init(style: FontStyle, color: Color? = nil) {
         self.style = style
+        self.color = color
     }
     
     private var fontName: String {
@@ -148,7 +150,7 @@ public struct TrecoTextStyle: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .font(.custom(fontName, size: fontSize))
-            .foregroundColor(style.color)
+            .foregroundColor(color ?? style.color)
     }
 }
 
