@@ -26,16 +26,20 @@ extension TokensManager {
         let jsonData = loadTokensFromJson(named: jsonName)
         self.tokens = jsonData ?? [:]
     }
+    
+    public func getValue<T>(_ token: String) -> T? {
+        tokens[token] as? T
+    }
 }
 
 // MARK: - Internal methods
 
 extension TokensManager {
-    public func getStringValue(_ token: String) -> String? {
+    func getStringValue(_ token: String) -> String? {
         tokens[token]
     }
     
-    public func getFloatValue(_ token: String) -> CGFloat? {
+    func getFloatValue(_ token: String) -> CGFloat? {
         guard let sizeString = tokens[token],
               let sizeDouble = Double(sizeString) else {
             return nil
