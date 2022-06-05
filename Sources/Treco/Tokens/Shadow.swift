@@ -42,7 +42,7 @@ public struct TrecoShadow: ViewModifier {
     
     public func body(content: Content) -> some View {
         content
-            .shadow(color: Color.treco(.neutralDarkPure), radius: shadow.radius, x: shadow.offset.width, y: shadow.offset.height)
+            .shadow(color: Color.treco(color), radius: shadow.radius, x: shadow.offset.width, y: shadow.offset.height)
     }
 }
 
