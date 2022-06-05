@@ -155,8 +155,8 @@ public struct TrecoTextStyle: ViewModifier {
 }
 
 public extension View {
-    func textStyle(_ style: FontStyle) -> some View {
-        modifier(TrecoTextStyle(style: style))
+    func textStyle(_ style: FontStyle, color: Color? = nil) -> some View {
+        modifier(TrecoTextStyle(style: style, color: color))
     }
 }
 
